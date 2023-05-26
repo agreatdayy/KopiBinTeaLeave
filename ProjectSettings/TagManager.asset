@@ -11,7 +11,7 @@ TagManager:
   - Background
   - Water
   - UI
-  - 
+  - Platform
   - 
   - 
   - 
@@ -43,4 +43,16 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Platform
+    uniqueID: 1744869285
+    locked: 0
+  - name: Enemies
+    uniqueID: 382700979
+    locked: 0
+  - name: Interactables
+    uniqueID: 2587893119
+    locked: 0
+  - name: Players
+    uniqueID: 2308980347
     locked: 0
