@@ -2875,7 +2875,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1550582553}
   - component: {fileID: 1550582554}
-  m_Layer: 0
+  - component: {fileID: 1550582555}
+  m_Layer: 9
   m_Name: TeaLeave
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2949,6 +2950,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1550582555
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550582552}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2eee5684ab703549a74e7633f4f3a94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1754930006
 GameObject:
   m_ObjectHideFlags: 0
