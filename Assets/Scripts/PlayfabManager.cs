@@ -8,6 +8,14 @@ using PlayFab.ClientModels;
 
 public class PlayfabManager : MonoBehaviour
 {
+    public static PlayfabManager Instance;
+
+    public string currentPlayer;
+
+    void Awake() {
+        Instance = this;
+    }
+
     [Header("UI")]
     public Text messageText;
     public InputField emailInput;
@@ -41,6 +49,73 @@ public class PlayfabManager : MonoBehaviour
 
     void OnLoginSuccess(LoginResult result) {
         messageText.text = "Logged in successfully!";
+        GetAccountInfo();
+        SceneManager.LoadScene(1);
+    }
+
+    void GetAccountInfo() {
+        var request = new GetAccountInfoRequest();
+        PlayFabClientAPI.GetAccountInfo(request, OnRequestSuccess, OnError);
+    }
+
+    void OnRequestSuccess(GetAccountInfoResult result) {
+        currentPlayer = result.AccountInfo.PlayFabId;
+    }
+
+    public void ResetPasswordButton() {
+        var request = new SendAccountRecoveryEmailRequest {
+            Email = emailInput.text,
+            TitleId = "B5656"
+        };
+        PlayFabClientAPI.SendAccountRecoveryEmail(request, OnPasswordReset, OnError);
+    }
+
+    void OnPasswordReset(SendAccountRecoveryEmailResult result) {
+        messageText.text = "Password reset email sent!";
+    }
+
+    public void SaveLevel(string level) {
+        var request = new UpdateUserDataRequest {
+            Data = new Dictionary<string, string> {
+                {"Levels", level}
+            }
+        };
+        PlayFabClientAPI.UpdateUserData(request, OnSaveSuccess, OnError);
+    }
+
+    public void GetLevels() {
+        var request = new GetUserDataRequest() {
+            PlayFabId = currentPlayer,
+            Keys = new List<string>() {
+                "Levels"
+            }
+        };
+        PlayFabClientAPI.GetUserData(request, OnLevelsReceived, OnError);
+    }
+
+    public string numberOfLevels;
+    
+    void OnLevelsReceived(GetUserDataResult result) {
+        if (result.Data != null && result.Data.ContainsKey("Levels")) {
+            numberOfLevels = result.Data["Levels"].Value;
+            //LevelsToInt(numberOfLevels);
+        }
+    }
+/*
+    int levels;
+
+    public static void LevelsToInt(string numOfLevels) {
+        if (!int.TryParse(numOfLevels, out levels)) {
+            return;
+        }
+    }
+
+    public int GetLevels() {
+        return this.levels;
+    }
+    */
+
+    void OnSaveSuccess(UpdateUserDataResult result) {
         SceneManager.LoadScene(1);
     }
 

@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     [SerializeField] float runSpeed = 5f;
 
     Vector2 moveInput;
@@ -20,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         Run();
     }
 
-    void onMove(InputValue value) {
+    void OnMove(InputValue value) {
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
     }
