@@ -9,20 +9,27 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] Vector2 rip = new Vector2(10f, 10f);
+    [SerializeField] GameObject bullet;
+    [SerializeField] Transform gun;
 
     Vector2 moveInput;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
-    CapsuleCollider2D myCapsuleCollider;
+    CapsuleCollider2D myBodyCollider;
+    BoxCollider2D myFeetCollider;
     float gravityScaleInit;
+    bool isAlive;
     
 
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        myCapsuleCollider = GetComponent<CapsuleCollider2D>();
+        myBodyCollider = GetComponent<CapsuleCollider2D>();
+        myFeetCollider = GetComponent<BoxCollider2D>();
         gravityScaleInit = myRigidBody.gravityScale;
+        isAlive = true;
     }
 
     void Update()
@@ -33,16 +40,23 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnMove(InputValue value) {
+        //if (!isAlive) { return ;}
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
     }
 
     void OnJump(InputValue value) {
-        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return ;}
+        //if (!isAlive) { return ;}
+        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return ;}
 
         if (value.isPressed) {
             myRigidBody.velocity += new Vector2(0f, jumpSpeed);
         }
+    }
+
+    void OnFire(InputValue value) {
+        //if (!isAlive) { return ;}
+        Instantiate(bullet, gun.position, transform.rotation);
     }
 
     void Run() {
@@ -62,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void ClimbLadder() {
-        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) { 
+        if (!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) { 
             myRigidBody.gravityScale = gravityScaleInit;
             myAnimator.SetBool("isClimbing", false);
             return ;
