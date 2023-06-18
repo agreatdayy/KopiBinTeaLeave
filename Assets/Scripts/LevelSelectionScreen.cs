@@ -15,14 +15,17 @@ public class LevelSelectionScreen : MonoBehaviour
         levels = User.UserInstance.ReturnUserLevels();
     }
 
+    public void TutorialLevel() {
+        SceneManager.LoadScene(2);
+    }
 
     public void LevelOneOne() {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void LevelOneTwo() {
         if (levels >= 2) {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         } else {
             message.text = "Level not yet unlocked!";
         }
@@ -30,7 +33,7 @@ public class LevelSelectionScreen : MonoBehaviour
 
     public void LevelOneThree() {
         if (levels >= 3) {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
         } else {
             message.text = "Level not yet unlocked!";
         }
@@ -38,7 +41,7 @@ public class LevelSelectionScreen : MonoBehaviour
 
     public void LevelTwoOne() {
         if (levels >= 4) {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
         } else {
             message.text = "Level not yet unlocked!";
         }
@@ -46,7 +49,7 @@ public class LevelSelectionScreen : MonoBehaviour
 
     public void LevelTwoTwo() {
         if (levels >= 5) {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(7);
         } else {
             message.text = "Level not yet unlocked!";
         }
@@ -54,7 +57,7 @@ public class LevelSelectionScreen : MonoBehaviour
 
     public void LevelTwoThree() {
         if (levels >= 6) {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(8);
         } else {
             message.text = "Level not yet unlocked!";
         }
@@ -62,7 +65,7 @@ public class LevelSelectionScreen : MonoBehaviour
 
     public void LevelThreeOne() {
         if (levels >= 7) {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(9);
         } else {
             message.text = "Level not yet unlocked!";
         }
@@ -70,7 +73,7 @@ public class LevelSelectionScreen : MonoBehaviour
 
     public void LevelThreeTwo() {
         if (levels >= 8) {
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(10);
         } else {
             message.text = "Level not yet unlocked!";
         }
@@ -78,7 +81,7 @@ public class LevelSelectionScreen : MonoBehaviour
 
     public void LevelThreeThree() {
         if (levels >= 9) {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(11);
         } else {
             message.text = "Level not yet unlocked!";
         }
