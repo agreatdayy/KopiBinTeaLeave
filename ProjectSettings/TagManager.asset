@@ -42,6 +42,24 @@ TagManager:
   - name: Background
     uniqueID: 418188929
     locked: 0
+  - name: Background 2
+    uniqueID: 2695872319
+    locked: 0
+  - name: Background 3
+    uniqueID: 2647328933
+    locked: 0
+  - name: Background 4
+    uniqueID: 835033781
+    locked: 0
+  - name: Decorations 0
+    uniqueID: 2846080655
+    locked: 0
+  - name: Decorations
+    uniqueID: 3058398491
+    locked: 0
+  - name: Decorations 2
+    uniqueID: 1736824409
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -50,6 +68,9 @@ TagManager:
     locked: 0
   - name: Climbing
     uniqueID: 744595049
+    locked: 0
+  - name: Hazards
+    uniqueID: 3459006377
     locked: 0
   - name: Enemies
     uniqueID: 382700979
