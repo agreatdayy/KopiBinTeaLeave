@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D myBodyCollider;
     BoxCollider2D myFeetCollider;
     float gravityScaleInit;
-    bool isAlive;
+    bool isAlive = true;
     
 
     void Start()
@@ -29,24 +30,27 @@ public class PlayerMovement : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravityScaleInit = myRigidBody.gravityScale;
-        isAlive = true;
+        // isAlive = true;
     }
 
     void Update()
     {
+        if (!isAlive) { return; }
+        
         Run();
         FlipSPrite();
         ClimbLadder();
+        Die();
     }
 
     void OnMove(InputValue value) {
-        //if (!isAlive) { return ;}
+        if (!isAlive) { return; }
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
     }
 
     void OnJump(InputValue value) {
-        //if (!isAlive) { return ;}
+        if (!isAlive) { return; }
         if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return ;}
 
         if (value.isPressed) {
@@ -55,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnFire(InputValue value) {
-        //if (!isAlive) { return ;}
+        if (!isAlive) { return; }
         Instantiate(bullet, gun.position, transform.rotation);
     }
 
@@ -89,4 +93,13 @@ public class PlayerMovement : MonoBehaviour
         bool hasVerticalSpeed = Mathf.Abs(myRigidBody.velocity.y) > Mathf.Epsilon;
         myAnimator.SetBool("isClimbing", hasVerticalSpeed);
     }
+
+    void Die() {
+        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards"))) {
+            isAlive = false;
+            myAnimator.SetTrigger("Dying");
+            SceneManager.LoadScene(User.UserInstance.currentLevel);
+        }
+    }
+
 }
