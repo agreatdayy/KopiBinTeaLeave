@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravityScaleInit = myRigidBody.gravityScale;
-        // isAlive = true;
     }
 
     void Update()

@@ -16528,7 +16528,7 @@ TilemapRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.021739125, y: 0.021739125, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -56959,11 +56959,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.052647114, y: 9.353137}
-      - {x: -15.198306, y: 9.028227}
-      - {x: -15.236591, y: -5.9194593}
-      - {x: 15.104712, y: -5.8876953}
-      - {x: 15.272195, y: 9.297789}
+    - - {x: -0.052647114, y: 10.079864}
+      - {x: -34.21433, y: 10.118318}
+      - {x: -34.09112, y: -14.236445}
+      - {x: -15.155846, y: -14.196074}
+      - {x: 14.377985, y: -14.164309}
+      - {x: 36.0183, y: -14.083561}
+      - {x: 36.145412, y: 10.105263}
 --- !u!4 &2017562673 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3113115198411710261, guid: e807c496932eb714991ef71cddbd9f84, type: 3}
@@ -57078,11 +57080,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3907382466754811288, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.98
+      value: -30.475588
       objectReference: {fileID: 0}
     - target: {fileID: 3907382466754811288, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.55
+      value: 1.6965306
       objectReference: {fileID: 0}
     - target: {fileID: 3907382466754811288, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57150,7 +57152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3907382466875547860, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
       propertyPath: m_ChildCameras.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3907382466875547860, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
       propertyPath: m_ParentHash.Array.data[0].m_Hash
@@ -57174,7 +57176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3907382467256483050, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.98
+      value: -37.08
       objectReference: {fileID: 0}
     - target: {fileID: 3907382467256483050, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -57184,9 +57186,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 3907382467256483051, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1973234159}
     - target: {fileID: 3907382467701854387, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.98
+      value: -37.08
       objectReference: {fileID: 0}
     - target: {fileID: 3907382467701854387, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -57196,6 +57202,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 3907382467701854388, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1973234159}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f64cc716c1d11145bc104f889f8adea, type: 3}
 --- !u!1 &2121975114
@@ -57262,7 +57272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3113115198411710261, guid: e807c496932eb714991ef71cddbd9f84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.06
+      value: -29.16
       objectReference: {fileID: 0}
     - target: {fileID: 3113115198411710261, guid: e807c496932eb714991ef71cddbd9f84, type: 3}
       propertyPath: m_LocalPosition.y
