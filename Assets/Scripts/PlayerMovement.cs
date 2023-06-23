@@ -105,20 +105,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Die() {
         bool isBodyTouching = myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards"))
-                                && myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards"));
+                                || myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards"));
         if (isBodyTouching) {
             isAlive = false;
             myRigidBody.velocity = new Vector2(0, 0);
             myAnimator.SetTrigger("Dying");
             StartCoroutine(Respawn());
+            isAlive = true;
         }
     }
 
     IEnumerator Respawn() {
         yield return new WaitForSecondsRealtime(respawnDelay);
         transform.position = respawnPoint;
-        yield return new WaitForSecondsRealtime(1f);
-        isAlive = true;
+        //yield return new WaitForSecondsRealtime(1f);
+        //isAlive = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
