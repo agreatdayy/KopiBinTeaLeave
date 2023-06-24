@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2617432499318175417}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1754930010}
   - component: {fileID: 1754930011}
   - component: {fileID: 2295427864127215609}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: TeaLeave
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -225,8 +225,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008219242, y: -0.08793539}
-  m_Size: {x: 0.7299738, y: 0.97105753}
+  m_Offset: {x: -0.008219242, y: -0.13436711}
+  m_Size: {x: 0.7299738, y: 0.8781941}
   m_Direction: 0
 --- !u!61 &2295427864127215609
 BoxCollider2D:

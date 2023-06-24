@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2987644221794756447}
   - component: {fileID: -4953693678815711564}
   - component: {fileID: -2457069396615192766}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Bullet_KP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1707074177
-  m_SortingLayer: 4
+  m_SortingLayerID: -1985986949
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1115229321, guid: 63c021d448fb68541a399c4d8ce30629, type: 3}
   m_Color: {r: 1, g: 0.1254902, b: 0, a: 1}

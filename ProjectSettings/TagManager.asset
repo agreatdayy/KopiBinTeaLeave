@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - RespawnCheckpoint
+  - LabLock
+  - LabKey
   layers:
   - Default
   - TransparentFX
@@ -15,10 +17,10 @@ TagManager:
   - UI
   - Ground
   - Climbing
-  - Player
   - Enemies
   - Hazards
   - Bullet
+  - Player
   - Interactables
   - Respawn
   - 
@@ -76,9 +78,9 @@ TagManager:
   - name: Enemies
     uniqueID: 382700979
     locked: 0
-  - name: Players
-    uniqueID: 2308980347
-    locked: 0
   - name: Interactables
     uniqueID: 2587893119
+    locked: 0
+  - name: Players
+    uniqueID: 2308980347
     locked: 0
