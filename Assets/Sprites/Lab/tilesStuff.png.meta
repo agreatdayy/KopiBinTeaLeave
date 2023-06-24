@@ -2783,6 +2783,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: tilesStuff_127
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 18
+        width: 32
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421bf3ec6fb01544d9c2e724d80bcb9b
+      internalID: 799161334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff_128
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 18
+        width: 32
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb8847551b0dae46bc931f8e3bba35f
+      internalID: -154820282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2824,6 +2866,8 @@ TextureImporter:
       tilesStuff_35: -336308558
       tilesStuff_121: 1439512896
       tilesStuff_36: 488769832
+      tilesStuff_127: 799161334
+      tilesStuff_128: -154820282
       tilesStuff_94: -437428364
       tilesStuff_114: 1597474694
       tilesStuff_34: -1412803226

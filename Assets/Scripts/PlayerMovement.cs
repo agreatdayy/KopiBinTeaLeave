@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D myFeetCollider;
     float gravityScaleInit;
     bool isAlive = true;
+    bool hasLabKey = false;
     private Vector3 respawnPoint;
     
 
@@ -58,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     void OnJump(InputValue value) {
         if (!isAlive) { return ; }
         
-        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Player"))) { return ;}
+        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Interactables"))) { return ;}
 
         if (value.isPressed) {
             myRigidBody.velocity += new Vector2(0f, jumpSpeed);
@@ -94,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             myAnimator.SetBool("isClimbing", false);
             return ;
         }
-        
+        Debug.Log("Start climbing :(");
         myRigidBody.gravityScale = 0f;
         Vector2 climbVelo = new Vector2(myRigidBody.velocity.x, moveInput.y * climbSpeed);
         myRigidBody.velocity = climbVelo;
@@ -109,12 +110,14 @@ public class PlayerMovement : MonoBehaviour
         if (isBodyTouching) {
             isAlive = false;
             myRigidBody.velocity = new Vector2(0, 0);
+            Debug.Log("DIE!");
             myAnimator.SetTrigger("Dying");
             StartCoroutine(Respawn());
         }
     }
 
     IEnumerator Respawn() {
+        Debug.Log("Death can't stop me");
         yield return new WaitForSecondsRealtime(respawnDelay);
         transform.position = respawnPoint;
         yield return new WaitForSecondsRealtime(1f);
@@ -123,8 +126,22 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Respawn"))) {
+            Debug.Log("Respawn Point reached!");
             respawnPoint = transform.position;
         }
-    }
 
+        // for level 2-1
+        if (other.tag == "LabKey") {
+            Debug.Log("Lab Key picked up");
+            hasLabKey = true;
+            Destroy(other.gameObject);
+        }
+        if (other.tag == "LabLock" && hasLabKey) {
+            Debug.Log("Lab door is unlocked");
+            hasLabKey = false;
+            Destroy(other.gameObject);
+        } else if (other.tag == "LabLock" && !hasLabKey) {
+            Debug.Log("Lab door is locked");
+        }
+    }
 }
