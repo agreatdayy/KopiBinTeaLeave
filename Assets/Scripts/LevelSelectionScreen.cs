@@ -33,7 +33,7 @@ public class LevelSelectionScreen : MonoBehaviour
         }
     }
 
-    public void LevelOneThree() {
+    public void LevelTwoOne() {
         if (levels >= 3) {
             User.UserInstance.currentLevel = 5;
             SceneManager.LoadScene(5);
@@ -42,7 +42,7 @@ public class LevelSelectionScreen : MonoBehaviour
         }
     }
 
-    public void LevelTwoOne() {
+    public void LevelTwoTwo() {
         if (levels >= 4) {
             User.UserInstance.currentLevel = 6;
             SceneManager.LoadScene(6);
@@ -51,7 +51,7 @@ public class LevelSelectionScreen : MonoBehaviour
         }
     }
 
-    public void LevelTwoTwo() {
+    public void LevelThree() {
         if (levels >= 5) {
             User.UserInstance.currentLevel = 7;
             SceneManager.LoadScene(7);
@@ -60,6 +60,7 @@ public class LevelSelectionScreen : MonoBehaviour
         }
     }
 
+    /*
     public void LevelTwoThree() {
         if (levels >= 6) {
             User.UserInstance.currentLevel = 8;
@@ -95,4 +96,5 @@ public class LevelSelectionScreen : MonoBehaviour
             message.text = "Level not yet unlocked!";
         }
     }
+    */
 }
