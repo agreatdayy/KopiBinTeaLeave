@@ -9,6 +9,8 @@ public class LevelSelectionScreen : MonoBehaviour
     static int levels;
 
     public Text message;
+
+    //[SerializeField] button i continue tmr yay
     // Start is called before the first frame update
     void Start()
     {   
@@ -60,41 +62,4 @@ public class LevelSelectionScreen : MonoBehaviour
         }
     }
 
-    /*
-    public void LevelTwoThree() {
-        if (levels >= 6) {
-            User.UserInstance.currentLevel = 8;
-            SceneManager.LoadScene(8);
-        } else {
-            message.text = "Level not yet unlocked!";
-        }
-    }
-
-    public void LevelThreeOne() {
-        if (levels >= 7) {
-            User.UserInstance.currentLevel = 9;
-            SceneManager.LoadScene(9);
-        } else {
-            message.text = "Level not yet unlocked!";
-        }
-    }
-
-    public void LevelThreeTwo() {
-        if (levels >= 8) {
-            User.UserInstance.currentLevel = 10;
-            SceneManager.LoadScene(10);
-        } else {
-            message.text = "Level not yet unlocked!";
-        }
-    }
-
-    public void LevelThreeThree() {
-        if (levels >= 9) {
-            User.UserInstance.currentLevel = 11;
-            SceneManager.LoadScene(11);
-        } else {
-            message.text = "Level not yet unlocked!";
-        }
-    }
-    */
 }
