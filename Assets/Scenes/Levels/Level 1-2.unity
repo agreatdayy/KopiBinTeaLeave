@@ -15913,7 +15913,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &958353347
@@ -35465,17 +35465,53 @@ PrefabInstance:
       propertyPath: level
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5860624243557662401, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.30982208
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860624243557662401, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.30662155
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860624243557662401, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860624243557662401, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.009030342
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860624243557662401, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860624243557662401, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 5860624243557662402, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5860624243557662402, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860624243557662402, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860624243557662402, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860624243557662402, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -58.51
+      value: -16.51
       objectReference: {fileID: 0}
     - target: {fileID: 5860624243557662402, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.2
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 5860624243557662402, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35509,6 +35545,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5860624243557662403, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 99d588c2c6483144d9c451c9422cf931, type: 3}
     - target: {fileID: 5860624243557662406, guid: ae5a2ff887fea1b41bb6095ca94ce42d, type: 3}
       propertyPath: m_Name
       value: LevelCheckpoint
