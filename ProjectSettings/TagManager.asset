@@ -24,7 +24,7 @@ TagManager:
   - Interactables
   - Respawn
   - NPCs
-  - 
+  - SpeechBox
   - 
   - 
   - 
@@ -86,4 +86,7 @@ TagManager:
     locked: 0
   - name: Players
     uniqueID: 2308980347
+    locked: 0
+  - name: UI
+    uniqueID: 1600681169
     locked: 0
