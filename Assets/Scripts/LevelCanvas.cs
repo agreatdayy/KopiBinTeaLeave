@@ -6,7 +6,13 @@ using UnityEngine.UI;
 
 public class LevelCanvas : MonoBehaviour
 {
+    [SerializeField] int nextScene;
+    
     public void LevelExitButton() {
         SceneManager.LoadScene(1);
+    }
+
+    public void CutsceneSkipButton() {
+        SceneManager.LoadScene(nextScene);
     }
 }
