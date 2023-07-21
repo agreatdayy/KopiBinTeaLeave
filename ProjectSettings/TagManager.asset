@@ -8,6 +8,7 @@ TagManager:
   - RespawnCheckpoint
   - LabLock
   - LabKey
+  - DialogueTrigger
   layers:
   - Default
   - TransparentFX
