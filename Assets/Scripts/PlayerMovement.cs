@@ -12,9 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 rip = new Vector2(10f, 10f);
     [SerializeField] GameObject bullet;
-    [SerializeField] GameObject speechBox;
     [SerializeField] Transform gun;
-    [SerializeField] Transform dialogueBoxPosition;
     [SerializeField] float respawnDelay = 2f;
     
 
@@ -27,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     float gravityScaleInit;
     bool isAlive = true;
     bool hasLabKey = false;
-    bool hasStartedDialogue = false;
     private Vector3 respawnPoint;
     
 
@@ -150,15 +147,5 @@ public class PlayerMovement : MonoBehaviour
         } else if (other.tag == "LabLock" && !hasLabKey) {
             Debug.Log("Lab door is locked");
         }
-
-        // for dialogue in tutorial level
-        // if (other.tag == "DialogueTrigger" && !hasStartedDialogue) {
-        //     hasStartedDialogue = true;
-        //     Debug.Log("Begin dialogue");
-        //     Instantiate(speechBox, dialogueBoxPosition.position, transform.rotation);
-        // } else if (other.tag == "DialogueTrigger" && hasStartedDialogue) {
-        //     return ;
-        // }
     }
-
 }
