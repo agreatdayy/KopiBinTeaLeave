@@ -447,10 +447,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2222180272278151051, guid: 73ade66f9e3668544a2e079ab1d50b87, type: 3}
-      propertyPath: m_Actions
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: 281791b9f0404b945b0a1fc6556638e5, type: 3}
     - target: {fileID: 3113115198411710261, guid: 73ade66f9e3668544a2e079ab1d50b87, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -499,8 +495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeaLeave(Lvl3)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3232051806740887928, guid: 73ade66f9e3668544a2e079ab1d50b87, type: 3}
+    - target: {fileID: 5313811410677273016, guid: 73ade66f9e3668544a2e079ab1d50b87, type: 3}
+      propertyPath: jumpSpeed
+      value: 16
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73ade66f9e3668544a2e079ab1d50b87, type: 3}
 --- !u!1001 &693032364
 PrefabInstance:
@@ -509,10 +508,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2222180272278151051, guid: 7d6b71c2fe8fcc540a82f66a0c44e7e2, type: 3}
-      propertyPath: m_Actions
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: e11e9f2354f13aa43a61fb20ed6c8514, type: 3}
     - target: {fileID: 3113115198411710261, guid: 7d6b71c2fe8fcc540a82f66a0c44e7e2, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -560,6 +555,10 @@ PrefabInstance:
     - target: {fileID: 3113115198411710267, guid: 7d6b71c2fe8fcc540a82f66a0c44e7e2, type: 3}
       propertyPath: m_Name
       value: KopiBin(Lvl3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118992903220771316, guid: 7d6b71c2fe8fcc540a82f66a0c44e7e2, type: 3}
+      propertyPath: jumpSpeed
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d6b71c2fe8fcc540a82f66a0c44e7e2, type: 3}
