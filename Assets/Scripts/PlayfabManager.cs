@@ -12,6 +12,8 @@ public class PlayfabManager : MonoBehaviour
 
     public string currentPlayer;
 
+    public int nextScene;
+
     void Awake() {
         Instance = this;
     }
@@ -116,7 +118,7 @@ public class PlayfabManager : MonoBehaviour
     */
 
     void OnSaveSuccess(UpdateUserDataResult result) {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(nextScene);
     }
 
     void OnError(PlayFabError error) {

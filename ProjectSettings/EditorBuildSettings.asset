@@ -35,5 +35,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CutScenes/CutScene Level 1-2.unity
     guid: 5b2377591b7b1da47b1dec88f44ce841
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/CutScene Level 1-2 End.unity
+    guid: 28bd5ac639f23b04e874a6bf62ff1e57
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/CutScene Level 2-1.unity
+    guid: 28ce78ecca47b0446ae75a46758f50f8
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/CutScene Level 2-2.unity
+    guid: 56859915218fb264baedb915426967c4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c1dc57f3af993af42b03e153ef9acea7, type: 2}
