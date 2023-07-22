@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
     [SerializeField] float respawnDelay = 2f;
+    
 
 
     Vector2 moveInput;
@@ -147,5 +148,4 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Lab door is locked");
         }
     }
-
 }
