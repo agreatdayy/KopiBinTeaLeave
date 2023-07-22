@@ -46,7 +46,6 @@ public class PlayerMovement : MonoBehaviour
         FlipSPrite();
         ClimbLadder();
         Die();
-    
     }
 
     void OnMove(InputValue value) {
@@ -54,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
             
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
-        
     }
 
     void OnJump(InputValue value) {
@@ -65,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
         if (value.isPressed) {
             myRigidBody.velocity += new Vector2(0f, jumpSpeed);
         }
-
     }
 
     void OnFire(InputValue value) {
