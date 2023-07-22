@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// FOR TUTORIAL LEVEL //
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private float typingSpeed = 0.5f;
@@ -25,7 +26,6 @@ public class DialogueManager : MonoBehaviour
 
     private int playerControlIndex = 0;
     private int hazardIndex = 0;
-    //private bool firstBoxStart = true;
 
     private void Start() {
         StartDialogue();
@@ -60,7 +60,6 @@ public class DialogueManager : MonoBehaviour
         if (playerControlIndex == playerControlSentences.Length - 1) {
             // destroy speech box
             Destroy(speechBoxOne);
-            //firstBoxStart = false;
             player.SetActive(true);
             bullet.SetActive(true);
         } else {

@@ -11,7 +11,7 @@ public class LevelSelectionScreen : MonoBehaviour
     public Text message;
 
     //[SerializeField] button i continue tmr yay
-    // Start is called before the first frame update
+
     void Start()
     {   
         levels = User.UserInstance.ReturnUserLevels();
