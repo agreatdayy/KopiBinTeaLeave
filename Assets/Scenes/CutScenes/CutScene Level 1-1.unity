@@ -28136,13 +28136,13 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.9
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.5
+  orthographic size: 2.2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -28815,7 +28815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1b7326afbe98a478964b93c0556076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTime: 10
+  changeTime: 14
   sceneNumber: 3
 --- !u!4 &1009367410
 Transform:

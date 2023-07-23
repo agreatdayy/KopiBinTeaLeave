@@ -7,13 +7,13 @@ public class User : MonoBehaviour
     public static User UserInstance;
     string userId;
     int levels;
-    public int currentLevel;
+    //public int currentLevel;
 
     // Start is called before the first frame update
     void Awake() {
         UserInstance = this;
         userId = PlayfabManager.Instance.currentPlayer;
-        currentLevel = 1;
+        //currentLevel = 1;
     }
 
     void GetUserLevels() {
@@ -21,6 +21,7 @@ public class User : MonoBehaviour
         if (!int.TryParse(PlayfabManager.Instance.numberOfLevels, out levels)) {
             return;
         }
+        //this.levels = PlayfabManager.Instance.numberOfLevels;
     }
 
     public int ReturnUserLevels() {

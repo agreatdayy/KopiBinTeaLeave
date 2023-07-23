@@ -16641,6 +16641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Security Guard (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6758078143483800601, guid: 0a01f5fde0ad89345a3c645d36e71faa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6758078143483800606, guid: 0a01f5fde0ad89345a3c645d36e71faa, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -36085,11 +36089,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758078143483800606, guid: 0a01f5fde0ad89345a3c645d36e71faa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.589367
+      value: -13.29
       objectReference: {fileID: 0}
     - target: {fileID: 6758078143483800606, guid: 0a01f5fde0ad89345a3c645d36e71faa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8818164
+      value: 2.82
       objectReference: {fileID: 0}
     - target: {fileID: 6758078143483800606, guid: 0a01f5fde0ad89345a3c645d36e71faa, type: 3}
       propertyPath: m_LocalPosition.z
