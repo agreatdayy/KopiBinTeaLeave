@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
+
 
 // FOR TUTORIAL LEVEL //
 public class DialogueManager : MonoBehaviour
@@ -10,7 +12,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject speechBoxOne;
     [SerializeField] private GameObject speechBoxTwo;
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject bullet;
 
     [Header("Dialogue TMP text")]
     [SerializeField] private TextMeshProUGUI playerControlText;
@@ -27,7 +28,10 @@ public class DialogueManager : MonoBehaviour
     private int playerControlIndex = 0;
     private int hazardIndex = 0;
 
+    private PlayerInput playerInput;
+
     private void Start() {
+        playerInput = player.GetComponent<PlayerInput>();
         StartDialogue();
     }
 
@@ -60,8 +64,7 @@ public class DialogueManager : MonoBehaviour
         if (playerControlIndex == playerControlSentences.Length - 1) {
             // destroy speech box
             Destroy(speechBoxOne);
-            player.SetActive(true);
-            bullet.SetActive(true);
+            playerInput.enabled = true;
         } else {
             // move on to next sentence
             playerControlIndex++;
