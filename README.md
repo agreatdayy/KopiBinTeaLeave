@@ -18,31 +18,4 @@ Feel free to send us feedback via [Google form](https://forms.gle/tMDrzRnowSbGRx
 
 
 **Game assets credits (from Itach.io)**
-
-Sprite sheets and tilemap:
-- Free Game Assets (GUI, Sprite, Tilesets)
-	-- Power Station Free Tileset
-	-- Free Scrolling City Background Pixel Art
-- BDragon1727
-	-- Free Effect Bullet Impact Explosion 32x32
-- Edu
-	-- Robot Platform Pack
-- ansimuz
-	-- Warped Sci-Fi Lab
-- marceles 🌴
-	-- Land of Pixels Laboratory Tileset
-- Pixel Frog
-	-- Kings and Pigs
-- NicoPardo
-	-- Quiet Cabin
-
-UI & Fonts:
-- UI Assets Pack 2 by Sr.Toasty
-- Pixeloid by GGBotNet
-- Licence with FAQ
-- friendly scribbles font by kmlgames
-
-Background music & sound effects:
-- 50 Menu Interface SFX by ColorAlpha
-- 41 Short, Loopable Background Music Files by joshuuu(@jhaeka)
-- Adventure Music Collection Pack 1 by ansimuz
+Please refer to the readme in the link above.
