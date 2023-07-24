@@ -1,3 +1,3 @@
 # KopiBinTeaLeave
 Orbital'23
-[KopiBinTeaLeave-MS1-README.pdf](https://github.com/agreatdayy/KopiBinTeaLeave/files/11589194/KopiBinTeaLeave-MS1-README.pdf)
+[KopiBinTeaLeave-MS3-README](https://docs.google.com/document/d/1hfhP4AdD3oPOpzp8BgfsDGf7hed0kbHHc0Av8YhDcgI/edit?usp=sharing)
