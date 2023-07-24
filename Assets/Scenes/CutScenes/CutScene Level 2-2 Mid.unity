@@ -43095,6 +43095,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 144194819122741316, guid: e96ba52f05244ae418d9841464151ec0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CutsceneSkipButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 144194819122741316, guid: e96ba52f05244ae418d9841464151ec0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Play
       objectReference: {fileID: 0}
@@ -43193,6 +43197,10 @@ PrefabInstance:
     - target: {fileID: 144194820370122196, guid: e96ba52f05244ae418d9841464151ec0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 144194820370122199, guid: e96ba52f05244ae418d9841464151ec0, type: 3}
+      propertyPath: nextScene
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 144194820443498076, guid: e96ba52f05244ae418d9841464151ec0, type: 3}
       propertyPath: m_text

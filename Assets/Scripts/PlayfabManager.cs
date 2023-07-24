@@ -62,6 +62,7 @@ public class PlayfabManager : MonoBehaviour
 
     void OnRequestSuccess(GetAccountInfoResult result) {
         currentPlayer = result.AccountInfo.PlayFabId;
+        Debug.Log(currentPlayer);
     }
 
     public void ResetPasswordButton() {
@@ -100,22 +101,9 @@ public class PlayfabManager : MonoBehaviour
     void OnLevelsReceived(GetUserDataResult result) {
         if (result.Data != null && result.Data.ContainsKey("Levels")) {
             numberOfLevels = result.Data["Levels"].Value;
-            //LevelsToInt(numberOfLevels);
         }
+        Debug.Log(numberOfLevels);
     }
-/*
-    int levels;
-
-    public static void LevelsToInt(string numOfLevels) {
-        if (!int.TryParse(numOfLevels, out levels)) {
-            return;
-        }
-    }
-
-    public int GetLevels() {
-        return this.levels;
-    }
-    */
 
     void OnSaveSuccess(UpdateUserDataResult result) {
         SceneManager.LoadScene(nextScene);
