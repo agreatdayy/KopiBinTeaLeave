@@ -1999,6 +1999,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7211686618606866238, guid: 3466a1d29d73bf44397e55dca4e4038e, type: 3}
   m_PrefabInstance: {fileID: 988034957}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &988034959 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7211686618606866239, guid: 3466a1d29d73bf44397e55dca4e4038e, type: 3}
+  m_PrefabInstance: {fileID: 988034957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1011325225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2174,6 +2179,8 @@ PlayableDirector:
     value: {fileID: 2006869732}
   - key: {fileID: -2041333277579973994, guid: 11522de98191baf4a97e119a72b75f0b, type: 2}
     value: {fileID: 1795016836}
+  - key: {fileID: 8120366409752770395, guid: 11522de98191baf4a97e119a72b75f0b, type: 2}
+    value: {fileID: 988034959}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1015431541
