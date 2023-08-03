@@ -14,6 +14,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
     [SerializeField] float respawnDelay = 2f;
+
+    [SerializeField] AudioSource jumpSFX;
+    [SerializeField] AudioSource footstepSFX;
+    [SerializeField] AudioSource dieSFX;
+    [SerializeField] AudioSource shootSFX;
+    [SerializeField] AudioSource pickUpItemSFX;
     
 
 
@@ -50,7 +56,8 @@ public class PlayerMovement : MonoBehaviour
 
     void OnMove(InputValue value) {
         if (!isAlive) { return ; }
-            
+        
+        footstepSFX.Play();
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
     }
@@ -61,6 +68,8 @@ public class PlayerMovement : MonoBehaviour
         if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Interactables"))) { return ;}
 
         if (value.isPressed) {
+            Debug.Log("Jump!!");
+            jumpSFX.Play();
             myRigidBody.velocity += new Vector2(0f, jumpSpeed);
         }
     }
@@ -68,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
     void OnFire(InputValue value) {
         if (isAlive) {
             Debug.Log("Pew!!");
+            shootSFX.Play();
             Instantiate(bullet, gun.position, transform.rotation);
         }
     }
@@ -111,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
             isAlive = false;
             myRigidBody.velocity = new Vector2(0, 0);
             Debug.Log("RIP!");
+            dieSFX.Play();
             myAnimator.SetTrigger("Dying");
             StartCoroutine(Respawn());
             isAlive = true;
@@ -134,6 +145,7 @@ public class PlayerMovement : MonoBehaviour
         // for level 2-1
         if (other.tag == "LabKey") {
             Debug.Log("Lab Key picked up");
+            pickUpItemSFX.Play();
             hasLabKey = true;
             Destroy(other.gameObject);
         }
