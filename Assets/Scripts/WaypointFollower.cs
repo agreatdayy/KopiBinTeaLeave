@@ -10,6 +10,7 @@ public class WaypointFollower : MonoBehaviour
 
     [SerializeField] float speed = 2f;
     
+    // Makes moving platform move towards the set waypoints
     void Update() {
         if (Vector2.Distance(waypoints[currentWaypointIndex].transform.position, transform.position) < 0.1f) {
             currentWaypointIndex++;

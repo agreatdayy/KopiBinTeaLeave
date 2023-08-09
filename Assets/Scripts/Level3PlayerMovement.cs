@@ -18,6 +18,7 @@ public class Level3PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        // Sets components of player character
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
@@ -28,10 +29,12 @@ public class Level3PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Moves player characters
         Run();
         FlipSPrite();
     }
 
+    // Moves characters horizontally according to player input
     void Run() {
         Vector2 playerVelo = new Vector2(moveInput.x * runSpeed, myRigidBody.velocity.y);
         myRigidBody.velocity = playerVelo;
@@ -40,6 +43,7 @@ public class Level3PlayerMovement : MonoBehaviour
         myAnimator.SetBool("isRunning", hasHorizontalSpeed);
     }
 
+    // Flips characters according to direction they are moving
     void FlipSPrite() {
         bool hasHorizontalSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
 
@@ -48,12 +52,15 @@ public class Level3PlayerMovement : MonoBehaviour
         }
     }
 
+    // Sets character movement speed based on player input
     void OnMove(InputValue value) {
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
     }
-
+    
+    // Sets vertical movement speed of characters based on player input
     void OnJump(InputValue value) {
+        // Checks that character is on ground before jumping. Prevents double jumps.
         if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Interactables"))) { return ;}
 
         if (value.isPressed) {

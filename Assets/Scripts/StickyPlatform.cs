@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Prevents player character from sticking to moving platforms' sides
 public class StickyPlatform : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision) {

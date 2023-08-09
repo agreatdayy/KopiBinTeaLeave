@@ -8,12 +8,13 @@ public class User : MonoBehaviour
     string userId;
     int levels;
 
-    // Start is called before the first frame update
     void Awake() {
+        // Sets user instance for current game session
         UserInstance = this;
         userId = PlayfabManager.Instance.currentPlayer;
     }
 
+    // Gets user's saved progress to use for current game session
     void GetUserLevels() {
         PlayfabManager.Instance.GetLevels();
         if (!int.TryParse(PlayfabManager.Instance.numberOfLevels, out levels)) {
@@ -23,6 +24,7 @@ public class User : MonoBehaviour
         
     }
 
+    // Returns user's saved progress for use in current game session
     public int ReturnUserLevels() {
         GetUserLevels();
         return this.levels;

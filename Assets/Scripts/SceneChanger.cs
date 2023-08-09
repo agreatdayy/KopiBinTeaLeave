@@ -8,7 +8,7 @@ public class SceneChanger : MonoBehaviour
     [SerializeField] float changeTime;
     [SerializeField] int sceneNumber;
 
-    // Update is called once per frame
+    // Changes scene when cutscene ends
     void Update()
     {
         changeTime -= Time.deltaTime;
