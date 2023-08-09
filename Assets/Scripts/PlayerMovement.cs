@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        // Sets character's components
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
@@ -46,14 +47,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // Ensures characters can oly move when alive
         if (!isAlive) { return ; }
             
+        // Moves characters based on player input
         Run();
         FlipSPrite();
         ClimbLadder();
         Die();
     }
 
+    // Sets character movement speed based on player input
     void OnMove(InputValue value) {
         if (!isAlive) { return ; }
         
@@ -62,9 +66,11 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(moveInput);
     }
 
+    // Sets character vertical movement speed based on player input
     void OnJump(InputValue value) {
         if (!isAlive) { return ; }
         
+        // Checks that character is on ground before jumping. Prevents double jumps.
         if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Interactables"))) { return ;}
 
         if (value.isPressed) {
@@ -74,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // Fires bullets if player is alive.
     void OnFire(InputValue value) {
         if (isAlive) {
             Debug.Log("Pew!!");
@@ -82,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // Moves player horizontally
     void Run() {
         Vector2 playerVelo = new Vector2(moveInput.x * runSpeed, myRigidBody.velocity.y);
         myRigidBody.velocity = playerVelo;
@@ -90,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
         myAnimator.SetBool("isRunning", hasHorizontalSpeed);
     }
 
+    // Flips player sprite based on direction of horizontal movement
     void FlipSPrite() {
         bool hasHorizontalSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
 
@@ -98,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // Allows vertical movement of chracters when touching a ladder
     void ClimbLadder() {
         if (!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) { 
             myRigidBody.gravityScale = gravityScaleInit;
@@ -114,6 +124,7 @@ public class PlayerMovement : MonoBehaviour
         myAnimator.SetBool("isClimbing", hasVerticalSpeed);
     }
 
+    // Kills players when they touch a hazard or enemy 
     void Die() {
         bool isBodyTouching = myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards"))
                                 || myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards"));
@@ -128,21 +139,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // Respawns player after death
     IEnumerator Respawn() {
         Debug.Log("Death can't stop me");
         yield return new WaitForSecondsRealtime(respawnDelay);
         transform.position = respawnPoint;
-        //yield return new WaitForSecondsRealtime(1f);
-        //isAlive = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        // Sets respawn point of player to current position when they enter a respawn checkpoint
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Respawn"))) {
             Debug.Log("Respawn Point reached!");
             respawnPoint = transform.position;
         }
 
         // for level 2-1
+        // Allows player to pick up key and use key to unlock lab door
         if (other.tag == "LabKey") {
             Debug.Log("Lab Key picked up");
             pickUpItemSFX.Play();
